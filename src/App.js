@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { StrictMode, useState } from "react";
+import SummaryTable from "./components/SummaryTable";
+import Details from "./components/Details";
+import MatchedTable from "./components/MatchedTable";
+import DiscrepancyTable from "./components/DiscrepancyTable";
+import AnalysisTable from "./components/AnalysisTable";
+import ComparisonTable from "./components/ComparisonTable";
+import ResultsTable from "./components/ResultsTable";
+import MatchedHighConfidenceTable from "./components/MatchedHighConfidenceTable";
+import AwaitingTable from "./components/AwaitingTable";
+import ExclusionsTable from "./components/ExclusionsTable";
+import './style.css'
 
-function App() {
+const App = () => {
+  const [activeRow, setActiveRow] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StrictMode>
+      <SummaryTable setActiveRow={setActiveRow} />
+      <Details activeRow={activeRow} />
+      <MatchedHighConfidenceTable activeRow={activeRow}/>
+      <MatchedTable activeRow={activeRow}/>
+      <DiscrepancyTable activeRow={activeRow}/>
+      <AnalysisTable activeRow={activeRow}/>
+      <AwaitingTable activeRow={activeRow}/>
+      <ComparisonTable activeRow={activeRow}/>
+      <ResultsTable activeRow={activeRow}/>
+      <ExclusionsTable activeRow={activeRow}/>
+    </StrictMode>
   );
-}
+};
 
 export default App;
