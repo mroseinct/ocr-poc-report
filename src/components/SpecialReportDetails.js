@@ -55,8 +55,8 @@ const SpecialReportDetails = (props) => {
 
     return (
       <div className="container mt-5">
-        <h3 className="text-center">OCR Document Classification Results Data Source For {activeRow.state}</h3>
-        <h5>This data dump contains all of the classification analysis results for {activeRow.state} and includes all the analysis jobs.</h5>
+        <h3 className="text-center">OCR Document Result Details For {activeRow.state}</h3>
+        <h5>This data contains the results data per transaction for {activeRow.state}. Shows how many documents were scanned for the deal and the number of documents that matched, had discrepancies or awaiting manual doc check.</h5>
         <h5>Table Count: {filteredItems.length}</h5>
         <DataTable
           //title="OCR Document Matched Results"
