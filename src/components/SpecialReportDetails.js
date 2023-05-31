@@ -58,7 +58,7 @@ const SpecialReportDetails = (props) => {
         <h3 className="text-center">OCR Document Result Details For {activeRow.state}</h3>
         <h5>This data contains the results data per transaction for {activeRow.state}. Shows how many documents were scanned for the deal and the number of documents that matched, had discrepancies or awaiting manual doc check.</h5>
         <h5>Overall accuracy reflects the percentage of the match count over the total documents scanned.</h5>
-        <h5>High Confidence accuracy reflects the percentage of the high confidence match count over the total documents scanned.</h5>
+        <h5>High Confidence accuracy reflects the percentage of the 95% and above high confidence match count over the total documents scanned.</h5>
         <h5>Table Count: {filteredItems.length}</h5>
         <DataTable
           //title="OCR Document Matched Results"
