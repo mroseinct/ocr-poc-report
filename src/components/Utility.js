@@ -18,3 +18,11 @@ export function filterItems(data, state) {
 
     return filteredItems;
 }
+
+export function filterSummaryItems(data, stateList) {
+    let filteredItems = data.filter(
+        item => item.state && stateList.includes(item.state)
+    );
+
+    return filteredItems;
+}
