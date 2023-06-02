@@ -33,9 +33,19 @@ const SpecialReportTable = (props) => {
       selector: row => row.totalMatchCount,
     },
     {
+      name: 'Average Match Count',
+      selector: row => row.averageMatchCount,
+      sortable: true
+    },
+    {
       name: 'Total High Confidence Match Count',
       selector: row => row.totalHighConfidenceMatchCount,
       sortable: true,
+    },
+    {
+      name: 'Average High Confidence Match Count',
+      selector: row => row.averageHighConfidenceMatchCount,
+      sortable: true
     },
     {
       name: 'Total Discrepancy Count',
