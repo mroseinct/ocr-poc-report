@@ -53,6 +53,11 @@ const SpecialReportTable = (props) => {
       sortable: true,
     },
     {
+      name: 'Average Discrepancy Count',
+      selector: row => row.averageDiscrepancyCount,
+      sortable: true
+    },
+    {
       name: 'Average Overall Accuracy',
       selector: row => row.averageOverallAccuracy,
       sortable: true,
