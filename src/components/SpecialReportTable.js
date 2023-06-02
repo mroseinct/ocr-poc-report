@@ -23,6 +23,11 @@ const SpecialReportTable = (props) => {
       sortable: true
     },
     {
+      name: 'Average Document Count',
+      selector: row => row.averageDocCount,
+      sortable: true
+    },
+    {
       name: 'Total Match Count',
       sortable: true,
       selector: row => row.totalMatchCount,
