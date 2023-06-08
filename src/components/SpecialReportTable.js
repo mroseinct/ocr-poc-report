@@ -69,7 +69,7 @@ const SpecialReportTable = (props) => {
     }
   ];
 
-  let states = ['PA', 'OH', 'VA', "FL", "GA", "NY", "CO", "NJ", "MI"];
+  let states = ['PA', 'OH', 'VA', "FL", "GA", "NY", "CO", "NJ", "MI", "MD"];
 
   const onRowClicked = (row, event) => {
     console.log("row", row);
